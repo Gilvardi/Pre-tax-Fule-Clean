@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pretax Fuel App</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Pretax Fuel App</h1>
+    <p class="subtitle">Phase 1: trip form and results page</p>
+
+    <form action="/plan" method="post" class="card">
+      <label>Origin
+        <input type="text" name="origin" value="Los Angeles, CA" required>
+      </label>
+
+      <label>Destination
+        <input type="text" name="destination" value="Miami, FL" required>
+      </label>
+
+      <label>Truck MPG
+        <input type="number" step="0.1" name="mpg" value="6.5" required>
+      </label>
+
+      <label>Usable Tank Gallons
+        <input type="number" step="0.1" name="tank_gallons" value="250" required>
+      </label>
+
+      <label>Reserve Gallons
+        <input type="number" step="0.1" name="reserve_gallons" value="30" required>
+      </label>
+
+      <label>Starting Gallons
+        <input type="number" step="0.1" name="start_gallons" value="80" required>
+      </label>
+
+      <button type="submit">Build Trip Plan</button>
+    </form>
+  </div>
+</body>
+</html>

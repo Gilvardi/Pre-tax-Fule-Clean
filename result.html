@@ -1,0 +1,34 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Trip Result</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Trip Plan Preview</h1>
+    <div class="card">
+      <p><strong>Route:</strong> {{ origin }} → {{ destination }}</p>
+      <p><strong>MPG:</strong> {{ mpg }}</p>
+      <p><strong>Tank:</strong> {{ tank_gallons }} gal</p>
+      <p><strong>Reserve:</strong> {{ reserve_gallons }} gal</p>
+      <p><strong>Starting fuel:</strong> {{ start_gallons }} gal</p>
+      <p><strong>Estimated safe range right now:</strong> {{ estimated_range }} miles</p>
+      <p><strong>Estimated safe range on full tank:</strong> {{ estimated_total_range }} miles</p>
+    </div>
+
+    <h2>Suggested sample stops</h2>
+    {% for stop in sample_stops %}
+      <div class="card">
+        <p><strong>{{ stop.name }}</strong></p>
+        <p>{{ stop.reason }}</p>
+        <p>Suggested buy: {{ stop.buy }} gal</p>
+      </div>
+    {% endfor %}
+
+    <p><a href="/">← Back</a></p>
+  </div>
+</body>
+</html>
